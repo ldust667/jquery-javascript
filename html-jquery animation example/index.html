@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="description" content="Featuring a common selection of fantasy games for new player's to try out."  />
+<meta name="keywords" content=" new,rpg,fantasy,gaming,D&D,Dungeons and dragons, warhammer, fallout, Elder Scrolls, fun,pc,xbox,game,bethesda,review,recommended,dice roller,rts" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <link rel="stylesheet" type="text/css"  href="main.css" />
+<title>Fantasy Games-Home</title>
+<style>
+
+.pullquote {
+		display:none;
+	}
+</style>
+  <script type="text/javascript" src="jquery-3.1.1.min.js">
+  
+
+
+
+ 	
+	</script>
+
+</head>
+
+<body>
+
+<div class="banner">
+<header>Fantasy Games-Home</header>
+</div>
+
+<nav><a href="index.html" target="_blank">  Home</a> <a href="Dnd.html" target="_blank">D&D </a> <a href="Warhammer.html" target="_blank">Warhammer </a> <a href="Fallout.html" target="_blank">Fallout </a> <a href="Elderscrolls.html" target="_blank">Elder Scrolls</a> </nav>
+<div class="content">
+<p>
+This Webpage is to give a few recommendations on some great fantasy games to pass the time.</p> 
+<div id="list">
+
+<ul>
+	<li>Dungeons and Dragons</li>
+	<li>Warhammer</li>
+	<li>Fallout</li>
+	<li>Elderscrolls</li>
+</ul>
+</div>
+
+<p>First on the list we have <a href="Dnd.html" target="_blank">D&D </a>. This game comes in many forms and is widely known across the world. 
+<span class="pq" id="d&d">See more.. </span>
+</p>
+<p>
+The second is the diceroller game known as <a href="Warhammer.html" target="_blank">Warhammer </a>. This game is set in an altenate universe consisting of multiple space races.
+<span class="pq" id="warhammer">See more.. </span>
+</p>
+<p> The <a href="Fallout.html" target="_blank">Fallout </a> series takes precedence in a post apocolyptic wasteland where bottle caps become the world's currency. 
+<span class="pq" id="fallout">See more..</span>
+ </p>
+<p><a href="Elderscrolls.html" target="_blank">Elder Scroll's</a> as a franchise always deliver with their in depth games. These games take you to a world in the midevil age.
+ Magic, swords and bows are what you and your character essentially live by..
+ <span class="pq" id="scrolls">See more.. </span>
+ </p>  
+<div class="pullquote">Links for additional "lure"</div>
+
+</div>
+
+
+<script>
+$(document).ready(function() {	
+
+	
+
+ var counter=0;
+//this function fires when text on the span is clicked is clicked
+	$("span.pq").click(function() {
+		 var clickElement=this;
+			function checkSelf(){
+	//checking for which element is clicked then populating with appropriate text
+			if(clickElement.id=="d&d"){
+			//window.alert("hit");
+			$(".pullquote").text("D&D  is a fantasy tabletop role-playing game originally designed by Gary Gygax and Dave Arneson, and first published in 1974 by Tactical Studies Rules,Inc. The game has been published by Wizards of the Coast since 1997.");
+			}
+		else if(clickElement.id=="fallout"){
+			$(".pullquote").text("At one point in the game's development, Fallout 3 featured a surgery mini-game to repair broken limbs");
+			}
+		
+		else if(clickElement.id=="warhammer"){
+		$(".pullquote").text("Warhammer Orks use Ork teeth for currency");
+		
+		}
+		
+		else if(clickElement.id=="scrolls"){
+		$(".pullquote").text("Being the second elder scrolls game, Daggerfall's game world exceeds that of the real-life size of Great Britain. That's over 80,000 square miles!");
+		
+		}
+	
+	}
+		//to repopulate the old text
+		
+		
+		
+		
+			checkSelf();
+		if(counter==0){
+		$(".pullquote").slideDown("slow");
+		counter=1;
+		}
+		/*if(counter==1)*/else{
+		$(".pullquote").slideUp("slow",function(){//asychronous does outside until slideup finishs then when done does this function(callback function)
+		
+		
+		
+			checkSelf();
+		
+		
+		
+		});
+	
+		
+	$(".pullquote").text("");
+		$(".pullquote").slideDown("slow");
+			
+		//counter=0;
+		}
+		
+		
+		
+	});
+  
+  
+});
+
+
+</script>
+
+
+
+
+
+<footer>By:Dustin Leach</footer>
+</body>
+</html>
